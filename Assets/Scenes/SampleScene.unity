@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 71457862}
   - component: {fileID: 71457861}
   m_Layer: 5
-  m_Name: ManaCostBar
+  m_Name: ManaPointBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -669,7 +669,7 @@ GameObject:
   - component: {fileID: 947923944}
   - component: {fileID: 947923943}
   m_Layer: 5
-  m_Name: DefaultManaCost
+  m_Name: DefaultManaPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -691,8 +691,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 15, y: 0}
-  m_SizeDelta: {x: -30, y: 0}
+  m_AnchoredPosition: {x: 20, y: 0}
+  m_SizeDelta: {x: -40, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &947923943
 MonoBehaviour:
@@ -1386,6 +1386,14 @@ MonoBehaviour:
   playerHand: {fileID: 771872313}
   playerField: {fileID: 2060945793}
   enemyField: {fileID: 1163230451}
+  playerLeaderHP: 0
+  enemyLeaderHP: 0
+  playerLeaderHPText: {fileID: 1404932106}
+  enemyLeaderHPText: {fileID: 1511522665}
+  playerManaPointText: {fileID: 1738500748}
+  playerDefaultManaPointText: {fileID: 947923943}
+  playerManaPoint: 0
+  playerDefaultManaPoint: 0
 --- !u!4 &1567852711
 Transform:
   m_ObjectHideFlags: 0
@@ -1413,7 +1421,7 @@ GameObject:
   - component: {fileID: 1738500749}
   - component: {fileID: 1738500748}
   m_Layer: 5
-  m_Name: ManaCost
+  m_Name: ManaPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1435,8 +1443,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -14.999999, y: 0}
-  m_SizeDelta: {x: 30.000002, y: 0}
+  m_AnchoredPosition: {x: -20, y: 0}
+  m_SizeDelta: {x: 40, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1738500748
 MonoBehaviour:
@@ -1635,6 +1643,7 @@ GameObject:
   - component: {fileID: 1925591194}
   - component: {fileID: 1925591196}
   - component: {fileID: 1925591195}
+  - component: {fileID: 1925591197}
   m_Layer: 5
   m_Name: EnemyLeader
   m_TagString: Untagged
@@ -1701,6 +1710,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1925591193}
   m_CullTransparentMesh: 1
+--- !u!114 &1925591197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925591193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52f7da01946274931bd012aab3386205, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1976053418
 GameObject:
   m_ObjectHideFlags: 0
@@ -1713,7 +1734,7 @@ GameObject:
   - component: {fileID: 1976053421}
   - component: {fileID: 1976053420}
   m_Layer: 5
-  m_Name: ManaCostPannel
+  m_Name: ManaPointPannel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
